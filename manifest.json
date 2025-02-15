@@ -1,0 +1,32 @@
+{
+  "id": "markdown-nice-v1",
+  "name": "公众号 & Markdown 排版",
+  "short_name": "公众号 & Markdown 排版",
+  "description": "专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "screenshots": [
+    {
+      "src": "/mockup.png",
+      "sizes": "1200x675",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "桌面端主页面"
+    }
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
