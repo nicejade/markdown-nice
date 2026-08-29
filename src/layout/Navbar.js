@@ -43,7 +43,7 @@ class Navbar extends Component {
             className="nice-title nice-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://niceshare.site/?ref=wechat.jeffjade.com"
+            href="https://www.niceshare.site/?ref=wechat.jeffjade.com"
           >
             逍遥自在轩
           </a>
@@ -59,7 +59,7 @@ class Navbar extends Component {
             className="nice-title nice-link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.thebettersites.com/?ref=wechat.jeffjade.com"
+            href="https://www.lovejade.cn/?ref=wechat.jeffjade.com"
           >
             清风明月轩
           </a>
