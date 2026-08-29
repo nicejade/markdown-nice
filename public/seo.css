@@ -93,6 +93,14 @@ body {
   color: var(--accent-ink);
 }
 
+.site-nav a:focus-visible,
+.brand:focus-visible,
+.btn:focus-visible,
+.site-footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .wrap {
   width: min(760px, calc(100% - 40px));
   margin: 0 auto;
