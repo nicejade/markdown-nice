@@ -1,198 +1,286 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>微信公众号 Markdown 排版 | 免费在线编辑器</title>
+    <meta
+      name="description"
+      content="免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。无需安装，打开即用。"
+    />
+    <meta
+      name="keywords"
+      content="微信公众号排版,Markdown编辑器,公众号Markdown,微信排版工具,mdnice,知乎排版,掘金排版,在线Markdown"
+    />
+    <meta name="author" content="nicejade" />
+    <meta name="publisher" content="晚晴幽草轩" />
+    <meta name="copyright" content="Copyright © 2026 晚晴幽草轩" />
+    <meta name="application-name" content="公众号 Markdown 排版" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="baiduspider" content="index, follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f59e0b" />
+    <meta name="msapplication-TileColor" content="#1478CC" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Markdown编辑器 | 微信公众号排版工具 | 在线内容创作平台</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="title" content="Markdown 编辑器 | 微信公众号排版工具 | 在线免费创作" />
-  <meta name="description"
-    content="专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。" />
-  <meta name="keywords"
-    content="Markdown编辑器,微信公众号排版,内容创作工具,在线排版工具,文章编辑器,内容运营工具,自定义主题,一键排版,实时预览,多平台支持,免费编辑器,内容创作,文章美化,排版助手,写作工具" />
+    <link rel="canonical" href="https://wechat.jeffjade.com/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://wechat.jeffjade.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://wechat.jeffjade.com/" />
+    <link rel="author" href="https://www.jeffjade.com/" />
+    <link rel="author" type="text/plain" href="https://wechat.jeffjade.com/humans.txt" />
+    <link rel="me" href="https://www.jeffjade.com/" />
+    <link rel="me" href="https://github.com/nicejade" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://wechat.jeffjade.com/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="LLM instructions" href="https://wechat.jeffjade.com/llms.txt" />
 
-  <meta name="author" content="nicejade" />
-  <meta name="publisher" content="晚晴幽草轩" />
-  <meta name="copyright" content="Copyright © 2024 晚晴幽草轩™ 版权所有" />
-  <meta data-n-head="ssr" data-hid="keywords" name="keywords"
-    content="Markdown 在线编辑器, 公众号排版, 内容创作工具, 自定义样式, 微信公众号, 知乎, 掘金, 在线 Markdown 编辑器, 微信公众号内容排版, Markdown 写作工具, 内容创作平台, 自定义 Markdown 样式, 微信公众号文章排版, 知乎文章排版, 掘金内容创作, 在线内容编辑器, Markdown 教程, Markdown 使用指南" />
-  <meta data-n-head="ssr" data-hid="description" name="description"
-    content="专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="mask-icon" href="%PUBLIC_URL%/favicon.svg" color="#1478CC" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="/" />
-  <meta property="og:title" content="Markdown 在线编辑器 | 公众号内容排版工具" />
-  <meta property="og:description"
-    content="专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。" />
-  <meta property="og:image" content="https://wechat.jeffjade.com/mockup.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="公众号 Markdown 排版" />
+    <meta property="og:url" content="https://wechat.jeffjade.com/" />
+    <meta property="og:title" content="微信公众号 Markdown 排版 | 免费在线编辑器" />
+    <meta
+      property="og:description"
+      content="免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。无需安装，打开即用。"
+    />
+    <meta property="og:image" content="https://wechat.jeffjade.com/mockup.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1350" />
+    <meta
+      property="og:image:alt"
+      content="公众号 Markdown 排版工具界面：左侧编辑 Markdown，右侧实时预览微信样式"
+    />
+    <meta property="og:updated_time" content="2026-08-30T00:00:00+08:00" />
 
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="/" />
-  <meta property="twitter:domain" content="wechat.jeffjade.com">
-  <meta property="twitter:title" content="Markdown 在线编辑器 | 公众号内容排版工具" />
-  <meta property="twitter:description"
-    content="专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。" />
-  <meta property="twitter:image" content="https://wechat.jeffjade.com/mockup.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nicejadeyang" />
+    <meta name="twitter:creator" content="@nicejadeyang" />
+    <meta name="twitter:title" content="微信公众号 Markdown 排版 | 免费在线编辑器" />
+    <meta
+      name="twitter:description"
+      content="免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。"
+    />
+    <meta name="twitter:image" content="https://wechat.jeffjade.com/mockup.png" />
+    <meta
+      name="twitter:image:alt"
+      content="公众号 Markdown 排版工具界面：左侧编辑 Markdown，右侧实时预览微信样式"
+    />
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.svg" />
-  <link rel="icon" type="image/svg+xml" href="https://wechat.jeffjade.com/mockup.png" />
-  <link rel="home" href="/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="mask-icon" href="/logo.png" color="#27a0cf" />
-  <link rel="canonical" href="https://wechat.jeffjade.com/" />
-  <meta name="msapplication-TileColor" content="#212121" />
-  <meta name="theme-color" content="#ffffff" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Markdown 在线编辑器 | 公众号内容排版工具",
-      "description": "M专业的 Markdown 在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。支持自定义主题、实时预览、中英文格式化、一键排版，让创作更轻松。立即使用，提升创作效率以及个人影响力。",
-      "url": "/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "晚晴幽草轩"
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://lovejade.oss-cn-shenzhen.aliyuncs.com" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://wechat.jeffjade.com/#website",
+            "url": "https://wechat.jeffjade.com/",
+            "name": "公众号 Markdown 排版",
+            "alternateName": ["Markdown Nice", "微信公众号排版工具", "mdnice"],
+            "description": "免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。",
+            "inLanguage": "zh-CN",
+            "publisher": { "@id": "https://wechat.jeffjade.com/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://wechat.jeffjade.com/#webpage",
+            "url": "https://wechat.jeffjade.com/",
+            "name": "微信公众号 Markdown 排版 | 免费在线编辑器",
+            "description": "免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。无需安装，打开即用。",
+            "inLanguage": "zh-CN",
+            "isPartOf": { "@id": "https://wechat.jeffjade.com/#website" },
+            "about": { "@id": "https://wechat.jeffjade.com/#app" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://wechat.jeffjade.com/mockup.png",
+              "width": 2400,
+              "height": 1350
+            },
+            "dateModified": "2026-08-30",
+            "breadcrumb": { "@id": "https://wechat.jeffjade.com/#breadcrumb" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://wechat.jeffjade.com/#app",
+            "name": "公众号 Markdown 排版",
+            "alternateName": ["Markdown Nice", "微信公众号 Markdown 编辑器"],
+            "url": "https://wechat.jeffjade.com/",
+            "image": "https://wechat.jeffjade.com/mockup.png",
+            "screenshot": "https://wechat.jeffjade.com/mockup.png",
+            "description": "在浏览器中把 Markdown 转成适合微信公众号、知乎、稀土掘金的排版，支持自定义主题、实时预览与一键复制。",
+            "applicationCategory": "UtilitiesApplication",
+            "applicationSubCategory": "Markdown Editor",
+            "operatingSystem": "Windows, macOS, Linux, Android, iOS",
+            "browserRequirements": "需要启用 JavaScript。建议使用 Chrome、Edge、Safari 或 Firefox 等现代浏览器。",
+            "softwareVersion": "1.9.6",
+            "inLanguage": "zh-CN",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "CNY",
+              "availability": "https://schema.org/InStock"
+            },
+            "featureList": [
+              "Markdown 实时预览",
+              "微信公众号一键排版与复制",
+              "知乎、稀土掘金样式导出",
+              "自定义主题与代码高亮",
+              "中英文混排与格式化",
+              "本地导入导出 Markdown / PDF",
+              "支持公式、表格、脚注"
+            ],
+            "author": { "@id": "https://wechat.jeffjade.com/#person" },
+            "publisher": { "@id": "https://wechat.jeffjade.com/#organization" },
+            "sourceOrganization": { "@id": "https://wechat.jeffjade.com/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://wechat.jeffjade.com/#organization",
+            "name": "晚晴幽草轩",
+            "alternateName": "JeffJade",
+            "url": "https://www.jeffjade.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg"
+            },
+            "sameAs": [
+              "https://www.jeffjade.com/",
+              "https://github.com/nicejade",
+              "https://twitter.com/nicejadeyang",
+              "https://weibo.com/jeffjade",
+              "https://www.niceshare.site/"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://wechat.jeffjade.com/#person",
+            "name": "nicejade",
+            "alternateName": ["晚晴幽草轩", "JeffJade"],
+            "url": "https://www.jeffjade.com/",
+            "image": "https://lovejade.oss-cn-shenzhen.aliyuncs.com/wechat-markdown-logo.svg",
+            "jobTitle": "独立开发者",
+            "description": "晚晴幽草轩作者，维护公众号 Markdown 排版等开源工具与内容站点。",
+            "sameAs": [
+              "https://www.jeffjade.com/",
+              "https://github.com/nicejade",
+              "https://twitter.com/nicejadeyang",
+              "https://weibo.com/jeffjade"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://wechat.jeffjade.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://wechat.jeffjade.com/"
+              }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "@id": "https://wechat.jeffjade.com/#howto",
+            "name": "如何用 Markdown 排版微信公众号文章",
+            "description": "使用公众号 Markdown 排版工具，把 Markdown 一键复制到微信公众号后台。",
+            "image": "https://wechat.jeffjade.com/mockup.png",
+            "totalTime": "PT3M",
+            "tool": {
+              "@type": "HowToTool",
+              "name": "公众号 Markdown 排版"
+            },
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "打开编辑器",
+                "text": "在浏览器打开 https://wechat.jeffjade.com/ ，无需注册或安装。"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "撰写或粘贴 Markdown",
+                "text": "在左侧编辑区用 Markdown 写作，或粘贴已有文稿。支持标题、列表、代码块、表格、公式与图片。"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "预览并选择主题",
+                "text": "右侧实时预览微信公众号效果。可在菜单中切换主题、代码高亮，以及知乎、掘金预览。"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "复制到公众号",
+                "text": "点击复制，将排版后的内容粘贴到微信公众号后台编辑器即可发布。"
+              }
+            ]
+          }
+        ]
       }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Markdown 在线编辑器 | 公众号内容排版工具",
-      "alternateName": "Wealth Tracker",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "ratingCount": "688",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "nicejade"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "晚晴幽草轩"
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMLPN6BYQ6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMLPN6BYQ6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag("js", new Date())
-    gtag("config", "G-PMLPN6BYQ6");
-  </script>
-  <!-- 添加更多Open Graph标签 -->
-  <meta property="og:locale" content="zh_CN" />
-  <meta property="og:site_name" content="晚晴幽草轩" />
-  <meta property="og:updated_time" content="2024-01-20T08:00:00+08:00" />
-
-  <!-- 添加更多Twitter Card标签 -->
-  <meta name="twitter:creator" content="@nicejade" />
-  <meta name="twitter:site" content="@wqyucaoxuan" />
-
-  <!-- 添加更多链接关系 -->
-  <link rel="alternate" href="https://wechat.jeffjade.com/en/" hreflang="en" />
-  <link rel="alternate" href="https://wechat.jeffjade.com/" hreflang="zh-CN" />
-  <link rel="author" href="https://jeffjade.com" />
-
-  <!-- 修改第一个结构化数据，添加更多信息 -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Markdown编辑器 | 微信公众号排版工具",
-      "description": "专业的Markdown在线编辑器，为微信公众号、知乎、掘金等平台提供一站式内容排版解决方案。",
-      "url": "https://wechat.jeffjade.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://wechat.jeffjade.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "晚晴幽草轩",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://wechat.jeffjade.com/logo.png"
-        }
-      },
-      "sameAs": [
-        "https://weibo.com/jeffjade",
-        "https://twitter.com/nicejadeyang",
-        "https://github.com/nicejade"
-      ]
-    }
-  </script>
-
-  <!-- 修改第二个结构化数据，更正分类并添加更多信息 -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Markdown编辑器",
-      "applicationCategory": "ContentManagementApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "ratingCount": "688",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "nicejade",
-        "url": "https://jeffjade.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "晚晴幽草轩",
-        "url": "https://wechat.jeffjade.com"
-      },
-      "applicationSubCategory": "MarkdownEditor",
-      "downloadUrl": "https://wechat.jeffjade.com",
-      "featureList": [
-        "实时预览",
-        "自定义主题",
-        "一键排版",
-        "多平台支持"
-      ],
-      "releaseNotes": "https://wechat.jeffjade.com/changelog",
-      "screenshot": "https://wechat.jeffjade.com/mockup.png"
-    }
-  </script>
-
-  <!-- 其余内容保持不变 -->
-</head>
-
-<body>
-  <noscript>您需要启用JavaScript才能运行此应用</noscript>
-  <div id="root"></div>
-</body>
-
+      gtag("js", new Date());
+      gtag("config", "G-PMLPN6BYQ6");
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <main id="seo-content">
+        <h1>微信公众号 Markdown 排版工具</h1>
+        <p id="seo-answer">
+          公众号 Markdown 排版是一款免费的在线 Markdown 编辑器，专门把 Markdown
+          转成适合微信公众号、知乎和稀土掘金的排版。打开浏览器即可使用，支持实时预览、自定义主题和一键复制。
+        </p>
+        <p>
+          当前浏览器未启用 JavaScript，编辑器无法运行。请开启 JavaScript 后刷新，或先阅读
+          <a href="/guide.html">使用指南</a>、<a href="/faq.html">常见问题</a> 与
+          <a href="/about.html">关于本工具</a>。
+        </p>
+        <h2>核心能力</h2>
+        <ul>
+          <li>微信公众号一键排版与复制</li>
+          <li>知乎、稀土掘金样式导出</li>
+          <li>自定义主题与代码高亮</li>
+          <li>中英文混排、表格、公式、脚注</li>
+          <li>导入导出 Markdown 与 PDF</li>
+        </ul>
+        <h2>如何把 Markdown 复制到微信公众号？</h2>
+        <ol>
+          <li>打开 <a href="https://wechat.jeffjade.com/">wechat.jeffjade.com</a></li>
+          <li>在左侧撰写或粘贴 Markdown</li>
+          <li>在右侧预览并选择主题</li>
+          <li>点击复制，粘贴到公众号后台</li>
+        </ol>
+        <p>作者：<a href="https://www.jeffjade.com/">nicejade（晚晴幽草轩）</a></p>
+      </main>
+    </noscript>
+    <div id="root"></div>
+  </body>
 </html>

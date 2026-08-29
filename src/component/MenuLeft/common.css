@@ -37,8 +37,15 @@
   background: #e6f7ff;
 }
 
-.nice-overlay {
-  top: 60px !important;
+.nice-menu-link:active {
+  color: #333;
+  background: #e6f7ff;
+}
+
+@media screen and (min-width: 768px) {
+  .nice-overlay {
+    top: 60px !important;
+  }
 }
 
 .nice-overlay ul {
@@ -59,4 +66,21 @@
 
 .nice-overlay ul label {
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nice-menu-item,
+  .nice-themeselect-theme-item {
+    min-height: 44px;
+    align-items: center;
+    padding: 11px 16px 11px 12px;
+  }
+
+  .nice-overlay ul .ant-dropdown-menu-item {
+    height: auto;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+  }
 }

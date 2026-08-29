@@ -97,6 +97,17 @@ class Footer extends Component {
           主题：
           {themeName}
         </p>
+        <nav className="nice-footer-links" aria-label="关于本站">
+          <a href="/guide.html" target="_blank" rel="noopener noreferrer">
+            指南
+          </a>
+          <a href="/faq.html" target="_blank" rel="noopener noreferrer">
+            问答
+          </a>
+          <a href="/about.html" target="_blank" rel="noopener noreferrer">
+            关于
+          </a>
+        </nav>
         {isPasteHtmlChecked && (
           <div className="nice-footer-message" onClick={this.handleMessage}>
             点击使用

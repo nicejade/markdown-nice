@@ -17,6 +17,31 @@
   padding: 0 10px;
 }
 
+.nice-footer-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 8px;
+}
+
+.nice-footer-links a {
+  font-size: 12px;
+  color: #666;
+  line-height: 20px;
+  padding: 0 8px;
+}
+
+.nice-footer-links a:hover,
+.nice-footer-links a:focus {
+  color: #1478cc;
+}
+
+@media screen and (max-width: 640px) {
+  .nice-footer-links {
+    display: none;
+  }
+}
+
 .nice-footer-message {
   display: flex;
   align-items: center;
