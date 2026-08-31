@@ -158,3 +158,26 @@ export const copySafari = (text) => {
   });
   document.execCommand("copy");
 };
+
+export const buildWeChatHtml = () => {
+  const layout = document.getElementById(LAYOUT_ID);
+  if (!layout) {
+    return "";
+  }
+  const html = layout.innerHTML;
+  solveWeChatMath();
+  const res = solveHtml();
+  layout.innerHTML = html;
+  return res;
+};
+
+export const copyWechatHtml = () => {
+  const res = buildWeChatHtml();
+  if (!res) {
+    message.error("复制失败，请稍后重试");
+    return false;
+  }
+  copySafari(res);
+  message.success("已复制，请到微信公众平台粘贴");
+  return true;
+};

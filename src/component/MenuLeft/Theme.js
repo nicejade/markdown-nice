@@ -93,10 +93,16 @@ class Theme extends React.Component {
         </li>
       </Menu>
     );
+    const currentTheme = (themeList[templateNum] && themeList[templateNum].name) || "主题";
     return (
-      <Dropdown overlay={mdMenu} trigger={["click"]} overlayClassName="nice-overlay">
-        <a id="nice-menu-theme" className="nice-menu-link" href="#">
-          主题
+      <Dropdown
+        overlay={mdMenu}
+        trigger={["click"]}
+        overlayClassName="nice-overlay nice-overlay-theme"
+        placement="bottomRight"
+      >
+        <a id="nice-menu-theme" className="nice-menu-link nice-menu-select" href="#">
+          <span className="nice-menu-select-label">{currentTheme}</span>
         </a>
       </Dropdown>
     );

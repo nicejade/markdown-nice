@@ -10,7 +10,9 @@ import CodeTheme from "../component/MenuLeft/CodeTheme";
 import Setting from "../component/MenuLeft/Setting";
 import View from "../component/MenuLeft/View";
 import Help from "../component/MenuLeft/Help";
+import {copyWechatHtml} from "../utils/converter";
 
+import "../component/MenuLeft/common.css";
 import "./Navbar.css";
 
 const MOBILE_NAV_QUERY = "(max-width: 767px)";
@@ -63,6 +65,11 @@ class Navbar extends Component {
     this.setState((prevState) => ({isMobileNavOpen: !prevState.isMobileNavOpen}));
   };
 
+  copyWechat = () => {
+    copyWechatHtml();
+    this.closeMobileNav();
+  };
+
   render() {
     const {title, token} = this.props;
     const {isImmersiveEditing} = this.props.view;
@@ -110,40 +117,77 @@ class Navbar extends Component {
               <Pattern />
               <Function />
               <View />
-              <Theme token={token} />
               <CodeTheme />
               <Setting />
               <Help />
             </nav>
-            <nav className="nice-right-nav" aria-label="相关站点">
-              <a
-                className="nice-title nice-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.niceshare.site/?ref=wechat.jeffjade.com"
-                onClick={this.closeMobileNav}
+            <div className="nice-right-nav">
+              <Theme token={token} />
+              <button
+                id="nice-navbar-copy"
+                type="button"
+                className="nice-navbar-copy"
+                aria-label="复制到微信公众号"
+                onClick={this.copyWechat}
               >
-                逍遥自在轩
-              </a>
-              <a
-                className="nice-title nice-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.jeffjade.com/nicelinks/?ref=wechat.jeffjade.com"
-                onClick={this.closeMobileNav}
-              >
-                晚晴幽草轩
-              </a>
-              <a
-                className="nice-title nice-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.lovejade.cn/?ref=wechat.jeffjade.com"
-                onClick={this.closeMobileNav}
-              >
-                清风明月轩
-              </a>
-            </nav>
+                <svg
+                  className="nice-navbar-copy-icon"
+                  viewBox="0 0 16 16"
+                  width="14"
+                  height="14"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect
+                    x="5.25"
+                    y="5.25"
+                    width="7.5"
+                    height="8.25"
+                    rx="1.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.4"
+                  />
+                  <path
+                    d="M3.5 10.75H3.25A1.75 1.75 0 0 1 1.5 9V3.75A1.75 1.75 0 0 1 3.25 2h5A1.75 1.75 0 0 1 10 3.75V4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.4"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                复制
+              </button>
+              <nav className="nice-navbar-friends" aria-label="相关站点">
+                <a
+                  className="nice-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.niceshare.site/?ref=wechat.jeffjade.com"
+                  onClick={this.closeMobileNav}
+                >
+                  逍遥自在轩
+                </a>
+                <a
+                  className="nice-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.jeffjade.com/nicelinks/?ref=wechat.jeffjade.com"
+                  onClick={this.closeMobileNav}
+                >
+                  晚晴幽草轩
+                </a>
+                <a
+                  className="nice-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.lovejade.cn/?ref=wechat.jeffjade.com"
+                  onClick={this.closeMobileNav}
+                >
+                  清风明月轩
+                </a>
+              </nav>
+            </div>
           </div>
         </div>
         {isMobileNavOpen ? (

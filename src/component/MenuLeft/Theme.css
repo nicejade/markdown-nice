@@ -12,10 +12,12 @@
 .nice-themeselect-theme-item {
   display: flex;
   justify-content: space-between;
-  padding: 5px 12px 5px 6px;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px 8px 8px;
 }
 .nice-themeselect-theme-item-author {
-  color: gray;
+  color: var(--nice-nav-muted);
 }
 .nice-themeselect-theme-item-name {
   margin-right: 10px;
@@ -23,8 +25,8 @@
 .nice-themeselect-theme-item-new {
   border-radius: 3px;
   font-size: 12px;
-  color: #1890ff;
-  background: rgb(230, 247, 255);
+  color: var(--nice-nav-cta);
+  background: var(--nice-nav-hover);
   padding: 0px 5px;
   margin-left: -5px;
   line-height: 18px;
@@ -32,6 +34,10 @@
 .nice-themeselect-theme-item-flag {
   display: inline-block;
   width: 16px;
+  color: var(--nice-nav-cta);
+}
+.nice-overlay-theme .ant-dropdown-menu {
+  min-width: 240px;
 }
 .nice-themeselect-icon {
   width: 18px;

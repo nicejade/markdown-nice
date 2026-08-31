@@ -18,17 +18,12 @@ import view from "./store/view";
 import {isPC} from "./utils/helper";
 import appContext from "./utils/appContext";
 import SvgIcon from "./icon";
-import {solveWeChatMath, solveZhihuMath, solveHtml} from "./utils/converter";
+import {buildWeChatHtml, solveZhihuMath, solveHtml} from "./utils/converter";
 import {LAYOUT_ID} from "./utils/constant";
 
 class Lib extends Component {
   getWeChatHtml() {
-    const layout = document.getElementById(LAYOUT_ID); // 保护现场
-    const html = layout.innerHTML;
-    solveWeChatMath();
-    const res = solveHtml();
-    layout.innerHTML = html; // 恢复现场
-    return res;
+    return buildWeChatHtml();
   }
 
   getZhihuHtml() {

@@ -1,12 +1,25 @@
+:root {
+  --nice-nav-fg: #16382f;
+  --nice-nav-muted: #5c6f69;
+  --nice-nav-hover: #eef5f1;
+  --nice-nav-line: rgba(22, 56, 47, 0.08);
+  --nice-nav-cta: #188a54;
+  --nice-nav-cta-hover: #147548;
+  --nice-nav-cta-active: #11633d;
+}
+
 .nice-menu-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 5px 12px 5px 6px;
+  padding: 8px 12px 8px 8px;
 }
 
 .nice-menu-shortcut {
-  color: gray;
+  color: var(--nice-nav-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
 }
 
 .nice-menu-name {
@@ -20,57 +33,142 @@
 .nice-menu-flag {
   display: inline-block;
   width: 16px;
+  color: var(--nice-nav-cta);
 }
 
 .nice-menu-link {
-  color: #333;
+  display: inline-flex;
+  align-items: center;
+  max-width: 220px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 8px;
+  color: var(--nice-nav-fg);
   font-size: 14px;
-  padding: 8px 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.nice-menu-link::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.42;
+  transition: transform 160ms ease, opacity 160ms ease;
 }
 
 .nice-menu-link:hover {
-  color: #333;
+  color: var(--nice-nav-fg);
+  background: var(--nice-nav-hover);
 }
 
 .nice-menu-link:focus {
-  color: #333;
-  background: #e6f7ff;
+  color: var(--nice-nav-fg);
+  background: var(--nice-nav-hover);
+  outline: none;
+}
+
+.nice-menu-link:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--nice-nav-cta);
 }
 
 .nice-menu-link:active {
-  color: #333;
-  background: #e6f7ff;
+  color: var(--nice-nav-fg);
+  background: var(--nice-nav-hover);
 }
 
-@media screen and (min-width: 768px) {
-  .nice-overlay {
-    top: 60px !important;
-  }
+.nice-menu-link.ant-dropdown-open {
+  color: var(--nice-nav-fg);
+  background: var(--nice-nav-hover);
 }
 
+.nice-menu-link.ant-dropdown-open::after {
+  transform: rotate(180deg);
+  opacity: 0.7;
+}
+
+.nice-menu-select {
+  height: 34px;
+  padding: 0 12px;
+  background: #f3f6f4;
+  border: 1px solid var(--nice-nav-line);
+}
+
+.nice-menu-select:hover,
+.nice-menu-select:focus,
+.nice-menu-select.ant-dropdown-open {
+  background: #e7eee9;
+  border-color: rgba(22, 56, 47, 0.16);
+}
+
+.nice-menu-select-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nice-overlay .ant-dropdown-menu,
 .nice-overlay ul {
-  border-radius: 0px 0px 4px 4px;
+  min-width: 176px;
+  padding: 6px;
+  border: 1px solid var(--nice-nav-line);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(22, 56, 47, 0.12);
 }
 
 .nice-overlay ul .ant-dropdown-menu-item {
   clear: both;
-  margin: 0;
+  margin: 1px 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  border-radius: 6px;
+  color: var(--nice-nav-fg);
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
   white-space: nowrap;
   cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.nice-overlay ul .ant-dropdown-menu-item:hover,
+.nice-overlay ul .ant-dropdown-menu-item-active {
+  background: var(--nice-nav-hover) !important;
+}
+
+.nice-overlay .ant-dropdown-menu-item-divider {
+  height: 1px;
+  margin: 4px 6px;
+  overflow: hidden;
+  line-height: 0 !important;
+  background: rgba(22, 56, 47, 0.12);
 }
 
 .nice-overlay ul label {
   cursor: pointer;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .nice-menu-link,
+  .nice-menu-link::after,
+  .nice-overlay ul .ant-dropdown-menu-item {
+    transition: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .nice-menu-item,
-  .nice-themeselect-theme-item {
+  .nice-themeselect-theme-item,
+  .nice-codetheme-item {
     min-height: 44px;
     align-items: center;
     padding: 11px 16px 11px 12px;

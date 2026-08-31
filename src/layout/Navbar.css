@@ -4,9 +4,10 @@
   align-items: center;
   flex: none;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--nice-nav-line);
+  box-shadow: 0 4px 16px rgba(22, 56, 47, 0.05);
   z-index: 2;
-  background: white;
+  background: #fff;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
@@ -26,23 +27,104 @@
   align-items: center;
   justify-content: space-between;
   min-width: 0;
+  gap: 12px;
 }
 
 .nice-left-nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  min-width: 0;
+  gap: 2px;
 }
 
 .nice-right-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 20px;
+  flex-shrink: 0;
+  gap: 8px;
+  margin-right: 16px;
+}
+
+.nice-navbar-friends {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 4px;
 }
 
 .nice-link {
-  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: var(--nice-nav-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.nice-link:hover,
+.nice-link:focus {
+  color: var(--nice-nav-fg);
+  background: var(--nice-nav-hover);
+}
+
+.nice-link:focus {
+  outline: none;
+}
+
+.nice-link:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--nice-nav-cta);
+}
+
+.nice-navbar-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 72px;
+  height: 34px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--nice-nav-cta);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.nice-navbar-copy:hover,
+.nice-navbar-copy:focus {
+  background: var(--nice-nav-cta-hover);
+}
+
+.nice-navbar-copy:focus {
+  outline: none;
+}
+
+.nice-navbar-copy:focus-visible {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--nice-nav-cta);
+}
+
+.nice-navbar-copy:active {
+  background: var(--nice-nav-cta-active);
+  transform: scale(0.98);
+}
+
+.nice-navbar-copy-icon {
+  display: block;
+  flex-shrink: 0;
 }
 
 .nice-icon-bar {
@@ -51,12 +133,15 @@
 
 .nice-title {
   margin: 0;
-  padding: 0 10px 0 20px;
-  font-weight: bold;
-  font-size: 16px;
+  padding: 0 12px 0 20px;
+  color: var(--nice-nav-fg);
+  font-weight: 700;
+  font-size: 17px;
   line-height: 1.2;
-  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia,
-    Times, "Times New Roman", serif;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  font-family: Optima-Regular, Optima, "Palatino Linotype", Palatino, PingFangSC-light, PingFangTC-light, "PingFang SC",
+    Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .nice-navbar-hide {
@@ -71,11 +156,23 @@
   display: none;
 }
 
-@media screen and (max-width: 1023px) {
-  .nice-right-nav {
+@media screen and (max-width: 1199px) {
+  .nice-navbar-friends {
     display: none;
   }
 
+  .nice-left-nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nice-left-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   .nice-title {
     padding: 0 8px 0 16px;
   }
@@ -83,8 +180,12 @@
   .nice-navbar .nice-menu-link {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
-    padding: 10px 12px;
+    min-height: 32px;
+    padding: 0 10px;
+  }
+
+  .nice-right-nav {
+    margin-right: 8px;
   }
 }
 
@@ -109,16 +210,16 @@
 
   .nice-navbar-toggle:hover,
   .nice-navbar-toggle:active {
-    background: #e6f7ff;
+    background: var(--nice-nav-hover);
   }
 
   .nice-navbar-toggle:focus {
     outline: none;
-    background: #e6f7ff;
+    background: var(--nice-nav-hover);
   }
 
   .nice-navbar-toggle:focus-visible {
-    box-shadow: 0 0 0 2px #1890ff;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--nice-nav-cta);
   }
 
   .nice-navbar-toggle-box {
@@ -134,7 +235,7 @@
     width: 18px;
     height: 2px;
     border-radius: 1px;
-    background: rgba(0, 0, 0, 0.75);
+    background: var(--nice-nav-fg);
     transition: transform 200ms ease, opacity 200ms ease, top 200ms ease;
   }
 
@@ -214,10 +315,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
     width: 100%;
     margin: 8px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--nice-nav-line);
+    gap: 8px;
+  }
+
+  .nice-navbar-friends {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 4px 0 0;
     padding-top: 8px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid var(--nice-nav-line);
   }
 
   .nice-navbar .nice-menu-link {
@@ -229,17 +341,23 @@
   }
 
   .nice-navbar .nice-menu-link:active {
-    background: #e6f7ff;
+    background: var(--nice-nav-hover);
   }
 
-  .nice-right-nav .nice-title {
-    flex: none;
-    max-width: none;
-    margin-right: 0;
+  .nice-navbar .nice-menu-select {
+    min-height: 44px;
+  }
+
+  .nice-navbar-copy {
+    min-height: 44px;
+    padding: 0 16px;
+  }
+
+  .nice-navbar-friends .nice-link {
+    min-height: 44px;
     padding: 10px 12px;
     font-size: 14px;
     font-weight: 600;
-    overflow: visible;
   }
 
   .nice-navbar-backdrop {
@@ -259,7 +377,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .nice-navbar-toggle-bar,
-  .nice-navbar-collapse {
+  .nice-navbar-collapse,
+  .nice-navbar-copy,
+  .nice-link {
     transition: none;
+  }
+
+  .nice-navbar-copy:active {
+    transform: none;
   }
 }
