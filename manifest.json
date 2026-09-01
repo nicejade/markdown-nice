@@ -1,0 +1,46 @@
+{
+  "id": "https://wechat.jeffjade.com/",
+  "name": "公众号 Markdown 排版",
+  "short_name": "公众号排版",
+  "description": "免费的微信公众号 Markdown 排版工具。在线编辑、实时预览、自定义主题，一键复制到公众号、知乎与掘金。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "categories": ["productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/mockup.png",
+      "sizes": "2400x1350",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "桌面端：左侧编辑 Markdown，右侧预览微信公众号样式"
+    }
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "使用指南",
+      "short_name": "指南",
+      "description": "如何把 Markdown 复制到微信公众号",
+      "url": "/guide.html"
+    },
+    {
+      "name": "常见问题",
+      "short_name": "问答",
+      "url": "/faq.html"
+    }
+  ]
+}

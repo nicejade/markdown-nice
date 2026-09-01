@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: nicejade
+Site: https://www.jeffjade.com/
+GitHub: https://github.com/nicejade
+Twitter: https://twitter.com/nicejadeyang
+From: 晚晴幽草轩
+
+/* SITE */
+Name: 公众号 Markdown 排版
+URL: https://wechat.jeffjade.com/
+Language: zh-CN
+Doctype: HTML5
+Standards: HTML5, CSS3, Schema.org JSON-LD
+Software: React, markdown-it
+Origin: Fork of mdnice/markdown-nice
+Last update: 2026-08-30

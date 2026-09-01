@@ -1,0 +1,58 @@
+# 公众号 Markdown 排版（完整说明）
+
+官网：https://wechat.jeffjade.com/
+
+公众号 Markdown 排版是免费的浏览器端 Markdown 编辑器，用于把 Markdown 转成适合微信公众号、知乎、稀土掘金的排版。用户在左侧编写 Markdown，右侧实时预览，再一键复制到对应平台的后台编辑器。
+
+## 产品边界
+
+- 这是网页工具，不是微信、腾讯、知乎或掘金的官方产品。
+- 不收费，不强制注册；文稿默认存在浏览器本地。
+- 推荐 Chrome、Arc、Edge、Safari 等现代浏览器。手机可以打开，但完整编辑体验按桌面设计。
+- 不要与名为 Wealth Tracker 的理财应用混淆。
+
+## 主要功能
+
+- 微信公众号样式预览与一键复制
+- 知乎、稀土掘金预览与复制
+- 自定义主题和代码高亮
+- 中英文混排、表格、脚注、数学公式
+- 导入导出 Markdown，必要时导出 PDF
+- 可配置阿里云、七牛、Gitee、GitHub 图床
+
+## 把 Markdown 复制到微信公众号
+
+1. 打开 https://wechat.jeffjade.com/
+2. 在左侧撰写或粘贴 Markdown，也可导入 .md 文件
+3. 在右侧预览，并用顶部菜单切换主题或代码高亮
+4. 点击复制，粘贴到微信公众号后台图文编辑器
+
+微信限制：正文里的链接通常只允许 https://mp.weixin.qq.com/ 域名；列表层级建议不超过两级。
+
+## 页面
+
+- 编辑器：https://wechat.jeffjade.com/
+- 使用指南：https://wechat.jeffjade.com/guide.html
+- 常见问题：https://wechat.jeffjade.com/faq.html
+- 关于：https://wechat.jeffjade.com/about.html
+
+## 作者与来源
+
+- 维护者：nicejade（晚晴幽草轩）https://www.jeffjade.com/
+- 源码：https://github.com/nicejade/markdown-nice
+- 上游：fork 自 https://github.com/mdnice/markdown-nice
+- 相关站点：https://www.niceshare.site/ 、https://www.lovejade.cn/
+
+## 常见问题（摘要）
+
+问：收费吗？
+答：免费，打开即用。
+
+问：支持哪些平台？
+答：微信公众号为主，同时支持知乎和稀土掘金。
+
+问：如何自定义主题？
+答：顶部「主题」「代码主题」，也可编辑 CSS。
+
+问：公式怎么写？
+答：行内 $E=mc^2$，独立公式使用 $$。

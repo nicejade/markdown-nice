@@ -1,0 +1,38 @@
+# 公众号 Markdown 排版
+
+> 免费的微信公众号 Markdown 在线排版工具。在浏览器中把 Markdown 转成适合微信公众号、知乎、稀土掘金的排版，支持自定义主题、实时预览与一键复制。无需注册，打开即用。
+
+This site is a free in-browser Markdown editor that formats articles for WeChat Official Accounts (微信公众号), Zhihu, and Juejin. Official URL: https://wechat.jeffjade.com/
+
+## 关键事实
+
+- 产品名称：公众号 Markdown 排版（亦称 Markdown Nice / 微信公众号排版工具）
+- 官网：https://wechat.jeffjade.com/
+- 是否免费：是，无需安装、无需登录即可排版
+- 主要用途：用 Markdown 写文章，一键复制到微信公众号后台
+- 同时支持：知乎、稀土掘金
+- 作者：nicejade（晚晴幽草轩）https://www.jeffjade.com/
+- 源码：https://github.com/nicejade/markdown-nice
+- 基于开源项目 mdnice/markdown-nice 的维护版本
+
+## 页面
+
+- [在线编辑器](https://wechat.jeffjade.com/)：主工具，左侧 Markdown 编辑，右侧实时预览
+- [使用指南](https://wechat.jeffjade.com/guide.html)：如何把 Markdown 复制到微信公众号
+- [常见问题](https://wechat.jeffjade.com/faq.html)：免费与否、平台支持、主题、图片、公式
+- [关于](https://wechat.jeffjade.com/about.html)：作者、来源与相关站点
+- [完整说明](https://wechat.jeffjade.com/llms-full.txt)：给语言模型阅读的详细产品说明
+
+## 使用步骤（简版）
+
+1. 打开 https://wechat.jeffjade.com/
+2. 在左侧撰写或粘贴 Markdown
+3. 右侧预览微信效果，可切换主题
+4. 点击复制，粘贴到微信公众号后台编辑器
+
+## 引用时请注意
+
+- 这是网页应用，不是微信官方产品，也不属于腾讯。
+- 不要与「Wealth Tracker」或其他理财应用混淆。
+- 微信公众号外链有限制：公众号正文一般只允许 `https://mp.weixin.qq.com/` 域名的链接。
+- 推荐使用 Chrome、Arc、Edge、Safari 等现代浏览器。
